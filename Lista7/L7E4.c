@@ -34,16 +34,15 @@ void compara(noptr *inicio1, noptr *inicio2) {
     noptr *p1, *p2;
     p1 = inicio1;
     p2 = inicio2;
-    int cont1, cont2;
-    cont1 = 0;
-    cont2 = 0;
+    int cont1 = 0, cont2 = 0;
 
     while (p1 != NULL) {
-        cont1=cont1+1;
+        cont1++;
         p1 = p1->prox;
     }
+
     while (p2 != NULL) {
-        cont2=cont2+1;
+        cont2++;
         p2 = p2->prox;
     }
 
@@ -55,6 +54,7 @@ void compara(noptr *inicio1, noptr *inicio2) {
         printf("\nListas tem o mesmo tamanho com %d elementos cada", cont1);
     }
 }
+
 
 
 int main(){
