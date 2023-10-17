@@ -14,7 +14,7 @@ void menu(){
     printf("\n4 - Sair\n");
 }
 
-void insereLista(noptr *inicio, noptr *novo, int valor){
+void insereLista(noptr **inicio, noptr *novo, int valor){
     noptr *p;
     novo->dados = valor;
     novo->prox = NULL;
