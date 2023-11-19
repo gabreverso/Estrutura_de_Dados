@@ -35,7 +35,7 @@ int enqueue(fila *f, int x){
 
 //funcao para remover dados da fila
 
-int dequeue(fila *f, int *x){
+int denqueue(fila *f, int *x){
     if(f->inicio == f->fim){
         printf("\nFila vazia!");
         return 0;
@@ -70,7 +70,7 @@ int main(void){
             }
 
             case 2:{
-                retorno = dequeue(&fila1, &valor);
+                retorno = denqueue(&fila1, &valor);
                 if(retorno == 1)
                     printf("\nDado removido: %d", valor);
                 else

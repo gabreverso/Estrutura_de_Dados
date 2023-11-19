@@ -22,7 +22,7 @@ int enqueue(fila *f, int x){
     }
 }
 
-int dequeue(fila *f, int *x) {
+int denqueue(fila *f, int *x) {
     if (f->inicio == f->fim) {
         printf("\nFila vazia!");
         return 0;
@@ -57,11 +57,11 @@ int main(){
             if(fila1.item[fila1.inicio] % 2 == 0){
                 temp = fila1.item[fila1.inicio];
                 soma += temp;
-                dequeue(&fila1, &valor);
+                denqueue(&fila1, &valor);
                 cont++;
             }
             else
-                dequeue(&fila1, &valor);
+                denqueue(&fila1, &valor);
         }
         else{
             printf("\nFila vazia!");

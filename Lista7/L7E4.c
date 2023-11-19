@@ -14,15 +14,15 @@ void menu(){
     printf("\n4 - Sair\n");
 }
 
-void insereLista(noptr *inicio, noptr *novo, int valor){
+void insereLista(noptr **inicio, noptr *novo, int valor){
     noptr *p;
     novo->dados = valor;
     novo->prox = NULL;
     if(inicio == NULL){
-        inicio = novo;
+        *inicio = novo;
     }
     else{
-        p = inicio;
+        p = *inicio;
         while(p->prox != NULL){
             p = p->prox;
         }
@@ -77,7 +77,7 @@ int main(){
                         printf("\nErro de alocacao");
                         return 1;
                     }
-                    insereLista(inicio1, dados1, recebe);
+                    insereLista(&inicio1, dados1, recebe);
                 }
                 break;
             }
@@ -91,7 +91,7 @@ int main(){
                         printf("\nErro de alocacao");
                         return 1;
                     }
-                    insereLista(inicio2, dados2, recebe);
+                    insereLista(&inicio2, dados2, recebe);
                 }
                 break;
             }

@@ -22,7 +22,7 @@ int enqueue(fila *f, int x){
     }
 }
 
-int dequeue(fila *f, int *x) {
+int denqueue(fila *f, int *x) {
     if (f->inicio == f->fim) {
         printf("\nFila vazia!");
         return 0;
@@ -54,7 +54,7 @@ int main(){
     }
 
     for(int i=0; i<max; i++){
-        retorno = dequeue(&fila1, &valor);
+        retorno = denqueue(&fila1, &valor);
 
         if(retorno == 1){
             if(valor <100)
