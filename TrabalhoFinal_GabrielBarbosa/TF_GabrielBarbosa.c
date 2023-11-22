@@ -385,8 +385,6 @@ void insertStudent(student **inicio, student s){
     }
     
     strcpy(novo->matricula, s.matricula);
-    printf("\nmatricula ");
-    puts(novo->matricula);
     strcpy(novo->nome, s.nome);
     strcpy(novo->curso, s.curso);
     strcpy(novo->end.rua, s.end.rua);
